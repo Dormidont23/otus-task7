@@ -3,7 +3,6 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.box_version = "2004.01"
-#  config.vm.box_architecture = "amd64"
   config.vm.provider "virtualbox" do |v|
   config.vm.synced_folder "./", "/vagrant", disabled: true
   v.memory = 4096
