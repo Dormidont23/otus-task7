@@ -12,5 +12,5 @@ end
     vv.vm.hostname = "otus-task7"
     vv.vm.provision "shell", path: "script.sh"
   end
-#  config.vm.provision "file", source: "./script.sh", destination: "/tmp/"
+# config.vm.provision "file", source: "./nginx.spec", destination: "/tmp/"
 end
