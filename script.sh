@@ -11,7 +11,7 @@ rpm -i nginx-1.*
 # Скачать и разархивировать openssl
 wget --no-check-certificate https://ftp.openssl.org/source/openssl-1.1.1k.tar.gz
 tar -xvf openssl-1.1.1k.tar.gz
-# Разобраться с зависимостями чтобы в процессе сборки не было ошибок
+# Разобраться с зависимостями, чтобы в процессе сборки не было ошибок
 yum-builddep -y /root/rpmbuild/SPECS/nginx.spec
 # Подправить файл nginx.spec файл, чтобы собрать nginx с поддержкой openssl
 sed -i 's!--with-debug!--with-openssl=/root/openssl-1.1.1k!' /root/rpmbuild/SPECS/nginx.spec
